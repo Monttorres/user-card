@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User card</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            padding: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif, arial;
+
+        }
+
+        .card {
+            display: grid;
+            background: rgb(255, 255, 255);
+            border-radius: 20px;
+            position: relative;
+            border: 1px solid none;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding: 20px;
+            gap: 20px;
+
+        }
+
+        .card__status {
+            background: rgb(232, 228, 228);
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+            padding: 10px 30px;
+            position: absolute;
+            top: -25px;
+            left: 40px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .card__padlock {
+            background: rgb(192, 181, 184);
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            position: absolute;
+            right: 20px;
+            top: 5px;
+            display: flex;
+        }
+
+        .card__padlock__circle {
+            background: rgb(93, 92, 92);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+
+        }
+
+        .card__date {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .card__date--black {
+            color: black;
+        }
+
+        .card__date--gray {
+            color: gray;
+        }
+
+        .card__actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .card__actions__title {
+            width: 30%;
+            height: 50px;
+            background: rgb(197, 192, 192);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border-radius: 5px;
+            position: absolute;
+            font-weight: bold;
+
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: rgb(189, 185, 185);
+            top: 15px;
+        }
+
+        .card__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+            padding: 25px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgb(230, 225, 225);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card__icon--colum {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card__icon--size {
+            font-size: 35px;
+            color: rgb(47, 42, 42);
+
+        }
+
+        .card__rol {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            justify-content: end;
+            align-items: end;
+            font-size: 20px;
+            text-align: center;
+
+        }
+
+        .card__rol__title__person {
+            background: rgb(201, 197, 197);
+            text-align: center;
+            border-radius: 20px;
+            padding: 15px;
+            margin-top: 10px;
+
+        }
+
+
+
+
+
+
+        @media screen and (max-width: 780px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__status">
+            Activo
+        </div>
+
+        <div class="card__padlock">
+            <div class="card__padlock__circle">
+            </div>
+        </div>
+
+        <div class="card__date">
+            <b class="card__date--black">
+                Cristian Emanuelle Guzmán Suárez
+            </b>
+            <span class="card__date--gray">
+                cris@gmail.com
+            </span>
+        </div>
+
+
+        <div class="line card__actions">
+            <div class="card__actions__title">
+                Acciones
+            </div>
+        </div>
+
+        <div class="card__icon">
+            <div class="card__icon--colum">
+                <div class="circle">
+                    <i class="fa-regular fa-eye card__icon--size"></i>
+                </div>
+                <span> view</span>
+            </div>
+
+            <div class="card__icon--colum">
+                <div class="circle">
+                    <i class="fa-solid fa-signal card__icon--size"></i>
+                </div>
+                <span>graph</span>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="card__rol">
+            <div class="card__rol__title">
+                <span>
+                    Rol
+                </span>
+                <div class="card__rol__title__person">
+                    Administrador
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
